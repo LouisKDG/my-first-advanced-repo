@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $connection = new PDO("mysql:host=ID211210_dashboard.db.webhosting.be;dbname=ID211210_dashboard", "ID211210_dashboard", "dbdashboard1");
+    $connection = new PDO("mysql:host=ID211210_yellowwit.db.webhosting.be;dbname=ID211210_yellowwit", "ID211210_yellowwit", "dbyellowwit1");
 } catch (Exception $exception) {
     echo $exception->getMessage();
 }
@@ -29,9 +29,10 @@ if (password_verify($_POST['password'], $password)) {
     $insertStatement->bindParam('username', $username);
     $insertStatement->execute();
     setcookie('auth', $sessionId, time() + 3600);
-    header('Location: opdracht4-dashboard.php');
+    header('Location: dashboard.php');
 } else {
-    header('Location: index.php');
+    header('Refresh: 0; index.php');
+    echo "<script>alert('Ongeldige login')</script>";
 }
 
 ?>

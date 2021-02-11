@@ -1,0 +1,31 @@
+body {
+    background: #eee;
+    font-family: Calibri;
+}
+
+.form {
+    border: solid gray 1px;
+    width: 10%;
+    border-radius: 5px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+}
+
+.button {
+    color: #fff;
+    background: #337ab7;
+    padding: 5px;
+    cursor: pointer;
+    font-family: Calibri;
+    border: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+}
+
+.question {
+    margin: 0px;
+}
