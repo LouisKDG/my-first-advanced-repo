@@ -1,5 +1,10 @@
 <?php
 
+// Check if user already logged in during the cookie lifetime, if this is true automatically redirect to dashboard.
+if ($_COOKIE['auth']) {
+    header('Location: dashboard.php');
+}
+
 // Set up connection with database
 try {
     $connection = new PDO("mysql:host=ID211210_yellowwit.db.webhosting.be;dbname=ID211210_yellowwit", "ID211210_yellowwit", "dbyellowwit1");

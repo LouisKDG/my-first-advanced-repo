@@ -1,5 +1,6 @@
 <?php
 
+// Set up connection with database
 try {
     $connection = new PDO("mysql:host=ID211210_yellowwit.db.webhosting.be;dbname=ID211210_yellowwit", "ID211210_yellowwit", "dbyellowwit1");
 } catch (Exception $exception) {
@@ -34,5 +35,3 @@ if (password_verify($_POST['password'], $password)) {
     header('Refresh: 0; index.php');
     echo "<script>alert('Ongeldige login')</script>";
 }
-
-?>

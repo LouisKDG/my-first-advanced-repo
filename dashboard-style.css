@@ -1,0 +1,76 @@
+body {
+    background: #eee;
+    font-family: Calibri;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 0;
+    margin: 0;
+}
+
+.top p {
+    padding-left: 20px;
+    font-size: 15px;
+    color: dimgray;
+}
+
+.top button {
+    color: #fff;
+    background: darkred;
+    padding: 7px;
+    cursor: pointer;
+    font-family: Calibri;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.blog {
+    text-align: center;
+}
+
+h1 {
+    color: dimgray;
+    font-size: 35px;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.post {
+    margin-bottom: 50px;
+    background-color: lightgray;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.post p {
+    margin-top: 1px;
+}
+
+.post .author {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.post .title {
+    margin-bottom: 0px;
+}
+
+.blog .blogpost {
+    color: #fff;
+    background: #337ab7;
+    padding: 5px;
+    cursor: pointer;
+    font-family: Calibri;
+    border: none;
+    font-size: 16px;
+}
+
