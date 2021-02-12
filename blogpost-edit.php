@@ -7,6 +7,7 @@ try {
     echo $exception->getMessage();
 }
 
+// Get the blog's id from the GET parameter
 $id = $_GET['blog'];
 
 // Check if user can access this page by comparing it's session id with cookie
@@ -16,7 +17,7 @@ $compareStatement->setFetchMode(PDO::FETCH_ASSOC);
 $compareStatement->execute();
 $session = $compareStatement->fetchColumn();
 
-// Check if cookie exists, if it does not exist, redirect to index page
+// Check if cookie is equal to session_id of the current user, if it is not, redirect to index page
 if ($_COOKIE['auth'] !== $session) {
     header('Location: index.php');
 }
@@ -40,6 +41,7 @@ $selectStatementPosts->bindParam('id', $id);
 $selectStatementPosts->execute();
 $postInfo = $selectStatementPosts->fetchAll();
 
+// Write the update query to update the blogpost
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $insertStatement = $connection->prepare("UPDATE posts SET title = :title, body = :body WHERE `posts`.`id` = :id ");
     $insertStatement->bindParam('title', $_POST['newTitle']);
