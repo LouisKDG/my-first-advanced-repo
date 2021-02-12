@@ -60,8 +60,6 @@ if (isset($_POST['title']) && isset($_POST['body'])) {
         $insertStatement->bindParam('id', $userId);
         $insertStatement->execute();
         echo "<script>alert('Bedankt voor uw post')</script>";
-        header('Refresh: 0; dashboard.php');
-        die();
     }
 }
 
